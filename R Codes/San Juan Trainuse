@@ -147,8 +147,8 @@ ui = fluidPage( # Create a design of rows and columns to organize our applicatio
              )
   )
 )
-
-d.tren <- read.socrata("https://www.indicadores.pr/dataset/N-mero-de-pasajeros-del-Tren-Urbano-Patrocinio-Tre/yvww-vrxd") # load the database R
+d.tren<-read.table("https://indicadores.pr/dataset/fcdd03b2-c36c-41f4-a014-32f9adf2c36f/resource/ebd89ca2-c2ed-4126-a835-26371088ea92/download/numero_de_pasajeros_del_tren_urbano__patrocinio__tren_urbano_ridership.csv",header=T,sep=",")
+#d.tren <- read.socrata("https://www.indicadores.pr/dataset/N-mero-de-pasajeros-del-Tren-Urbano-Patrocinio-Tre/yvww-vrxd") # load the database R
 names(d.tren)[1] <- "Fecha" # Substitute the name of the first column of the database by date
 
 nyr <- as.character(d.tren$Fecha, format = "%Y") # dates by year 
